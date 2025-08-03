@@ -5,7 +5,6 @@
 - 非活跃用户 = 数据库中 `isActive: false`。
 
 ---
----
 
 # User API Notes (Last updated: 2022)
 

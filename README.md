@@ -22,7 +22,13 @@
 您将处理以下 4 个任务 —— 请在时间限制内尽量完成：
 
 1. **修复 Bug**  
-   当提供无效的 ID 格式时，`GET /users/:id` 返回了错误的用户。
+   目前，`GET /users/:id` 在以下两种情况下都会返回 **404 Not Found**：
+   - 当用户不存在时  
+   - 当 ID 格式无效（不是合法的 UUID v4）  
+
+   请修改逻辑，使得：
+   - 如果 ID 格式无效 → 返回 **400 Bad Request**
+   - 如果 ID 格式有效但用户不存在 → 返回 **404 Not Found**
 
 2. **扩展 API**  
    添加查询过滤功能，例如：`/users?status=active&team=marketing`
@@ -39,8 +45,8 @@
 
 倒计时结束后，平台将要求您：
 
-1. 📁 压缩并上传您修改后的项目，格式为 `.zip`
-2. 🎤 在浏览器中录制一个 **简短的回顾视频**（最多 2 分钟）
+1. 🎤 在浏览器中录制一个 **简短的回顾视频**（最多 2 分钟）
+2. 📁 压缩并上传您修改后的项目，格式为 `.zip`
 
 ---
 
@@ -54,70 +60,12 @@
 
 ---
 
+## 📄 关于 `wiki.md`
+
+代码仓库中包含一个 `wiki.md` 文件。  
+该文档最后更新时间是 **数年前**，其中可能包含 **不准确或过时的信息**。  
+请仅将其作为**参考**，不要视为权威说明。
+
+---
+
 祝您好运！我们期待看到您的思路与解决方案！
-
-— VeeSpark & Foretoken AI 团队  
-[assessment@foretokenai.com](mailto:assessment@foretokenai.com)
-
----
----
-
-# VeeSpark - Real-Work Coding Assessment
-
-Welcome! You’ve been invited to complete a short, real-world coding challenge designed to reflect the kind of work you might actually do on the job.
-
----
-
-## 📋 What You Need to Know
-
-- Your **screen and audio recording** has already started (via your browser).
-- Please **do not close or refresh the assessment tab** — doing so will stop the recording and may void your submission.
-- You may use **any AI tools** (e.g. ChatGPT, GitHub Copilot, etc.)
-- This is a **solo** exercise — no pair programming or external help allowed.
-
-If you encounter issues, contact our team at **[assessment@foretokenai.com](mailto:assessment@foretokenai.com)** immediately.
-
----
-
-## 💻 What You’ll Work On
-
-You’ll be working inside a small, realistic codebase in Node.js/Express. The goal is not to finish everything, but to make strong, thoughtful progress.
-
-You’ll be working on the following 4 tasks — complete as many as you can within the time limit:
-
-1. **Fix a Bug**  
-   `GET /users/:id` returns the wrong user when given an invalid ID format.
-
-2. **Extend an API**  
-   Add support for query filtering: `/users?status=active&team=marketing`
-
-3. **Build a Feature**  
-   Add `GET /users/inactive` to return users with no login activity in the last 30+ days.
-
-4. **Write Tests**  
-   Add integration tests for any endpoint.
-
----
-
-## 📦 What to Submit
-
-After the timer ends, the platform will ask you to:
-
-1. 📁 Compress & upload your modified project as a `.zip`
-2. 🎤 Record a **short reflection video** (up to 2 minutes) in your browser
-
----
-
-## 💡 What We’re Evaluating
-
-We’re not just looking for perfect code. We’re looking at:
-- Your ability to navigate a real codebase
-- Your problem solving skills
-- Coding skills as well as documentation clarity
-
----
-
-Good luck — we’re excited to see your thinking and approach!
-
-— VeeSpark & Foretoken AI Team 
-[assessment@foretokenai.com](mailto:assessment@foretokenai.com)
