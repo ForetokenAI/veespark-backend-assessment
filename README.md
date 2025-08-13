@@ -1,6 +1,6 @@
-# VeeSpark - 实战编码评估
+# VeeSpark - 实战编码评估 (Java Spring Boot Version)
 
-欢迎！您被邀请完成一个简短的、真实世界的编码挑战，旨在反映您在实际工作中可能遇到的任务。
+欢迎！这是 VeeSpark 后端评估任务的 Java Spring Boot 版本。您被邀请完成一个简短的、真实世界的编码挑战，旨在反映您在实际工作中可能遇到的任务。
 
 ---
 
@@ -15,14 +15,42 @@
 
 ---
 
+## 🚀 项目运行
+
+### 前提条件
+- Java 17 或更高版本
+- Maven 3.6 或更高版本
+
+### 运行项目
+```bash
+# 编译项目
+mvn clean compile
+
+# 运行应用
+mvn spring-boot:run
+
+# 运行测试
+mvn test
+```
+
+应用将在 `http://localhost:8080` 启动。
+
+### API 端点
+- `GET /users` - 获取所有用户
+- `GET /users/{id}` - 根据ID获取用户
+- `GET /users?status=active&team=marketing` - 带过滤条件获取用户
+- `GET /users/inactive` - 获取非活跃用户
+
+---
+
 ## 💻 您将完成的任务
 
-您将在一个小型、真实的 Node.js/Express 代码库中工作。目标不是完成所有任务，而是做出扎实、有思考的进展。
+您将在一个小型、真实的 Java Spring Boot 代码库中工作。目标不是完成所有任务，而是做出扎实、有思考的进展。
 
 您将处理以下 4 个任务 —— 请在时间限制内尽量完成：
 
 1. **修复 Bug**  
-   目前，`GET /users/:id` 在以下两种情况下都会返回 **404 Not Found**：
+   目前，`GET /users/{id}` 在以下两种情况下都会返回 **404 Not Found**：
    - 当用户不存在时  
    - 当 ID 格式无效（不是合法的 UUID v4）  
 

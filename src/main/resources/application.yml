@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: users-service
+  jackson:
+    time-zone: UTC
+    date-format: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
+logging:
+  level:
+    com.veespark: INFO

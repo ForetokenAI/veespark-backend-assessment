@@ -1,0 +1,5 @@
+com/veespark/users/UsersServiceApplication.class
+com/veespark/users/controller/UsersController.class
+com/veespark/users/repository/UserRepository.class
+com/veespark/users/repository/UserRepository$1.class
+com/veespark/users/model/User.class
